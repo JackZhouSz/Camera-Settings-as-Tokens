@@ -29,7 +29,7 @@ python text+cam2image.py --prompt "half body portrait of a beautiful Portuguese 
 For imaginary prompt, such as "astronaut riding a horse on the moon", we recommand to set the `--lora_scale` to 0.5.
 
 ### Results
-![](Camera-Settings-as-Tokens/results/woman_cherry_blossom_trees+50mm_f4_0_ISO100_ET0_01_seed87.png)
+![](./results/woman_cherry_blossom_trees+50mm_f4_0_ISO100_ET0_01_seed87.png)
 
 ## ToDo
 - [ ] Code for image editing
