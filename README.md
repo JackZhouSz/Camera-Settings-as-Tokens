@@ -1,5 +1,5 @@
 # Camera Settings as Tokens
-[[project page]](https://camera-settings-as-tokens.github.io/)[[demo]](https://huggingface.co/spaces/Camera-Settings-as-Tokens/Camera-Settings-as-Tokens)[[dataset]](https://github.com/aiiu-lab/CameraSettings20K)[[model]](https://huggingface.co/ishengfang/Camera-Settings-as-Tokens-SD2)
+[[paper]](https://dl.acm.org/doi/10.1145/3680528.3687635)[[project page]](https://camera-settings-as-tokens.github.io/)[[demo]](https://huggingface.co/spaces/Camera-Settings-as-Tokens/Camera-Settings-as-Tokens)[[dataset]](https://github.com/aiiu-lab/CameraSettings20K)[[model]](https://huggingface.co/ishengfang/Camera-Settings-as-Tokens-SD2)
 
 Offical code for our SIGGRAPH Asia 2024 paper, Camera Settings as Tokens: Modeling Photography on Latent Diffusion Models
 
