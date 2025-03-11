@@ -58,7 +58,7 @@ python text+cam2image_w_controlnet.py --prompt "a cute cat, nature and cherry bl
 
 ## ToDo
 - [ ] Code for image editing
-- [v] Code for inference with ControlNet
+- [x] Code for inference with ControlNet
 - [ ] Add the code for the training
 - [ ] SDXL
 
