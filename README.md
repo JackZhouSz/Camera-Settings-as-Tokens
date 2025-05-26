@@ -56,10 +56,37 @@ python text+cam2image_w_controlnet.py --prompt "a cute cat, nature and cherry bl
 ![](./results/depth_cat_cherry_blossom_trees.png)
 ![](./results/cat_cherry_blossom_trees+50mm_f1_8_ISO100_ET0_01_seed87.png)
 
+## Training
+
+We provide the code for training the model. 
+
+### Usage
+```bash
+accelerate launch train_cam+text2image_lora.py \
+  --pretrained_model_name_or_path "stabilityai/stable-diffusion-2-1" \
+  --dataset_name <dataset_path>\
+  --caption_column "text" \
+  --resolution 512 --random_flip \
+  --train_batch_size <batch_size> --gradient_accumulation_steps <gradient_accumulation_steps> \
+  --num_train_epochs 100 --checkpointing_steps 500 \
+  --learning_rate 1e-04 --lr_scheduler "constant" --lr_warmup_steps 0 \
+  --dataloader_num_workers <number of workers> \
+  --output_dir <output_path for logs and weights> \
+  --validation_prompt <validation_prompt (seperate with space)> \
+  --validation_focal_length <validation_focal_length (seperate with space)> \
+  --validation_f_number <validation_f_number (seperate with space)> \
+  --validation_iso_speed_rating <validation_iso_speed_rating (seperate with space)> \
+  --validation_exposure_time <validation_exposure_time (seperate with space)> \
+  --cam_embed_embedding_dim 1024 \
+  --valid_seed 87
+```
+
+We recommend to set the total batch size to 128. For Stable Diffusion 2, please set `cam_embed_embedding_dim` to 1024 to fit the output dimension of the OpenCLIP text encoder.  For Stable Diffusion 1, please set `cam_embed_embedding_dim` to 768 to fit the output dimension of the CLIP text encoder.
+
 ## ToDo
 - [ ] Code for image editing
 - [x] Code for inference with ControlNet
-- [ ] Add the code for the training
+- [x] Add the code for the training
 - [ ] SDXL
 
 ## Notice
